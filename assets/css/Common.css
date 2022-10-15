@@ -1,0 +1,39 @@
+html,
+body {
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.logo {
+  margin-top: 3px;
+  margin-right: 20px;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  background-image: url("../../assets/img/logo-wide.png");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.all-subjects {
+  margin-top: 50px;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+@media (max-width: 400px) {
+  .all-subjects {
+    /* flex: 100%; */
+    flex-direction: column;
+    /* width: 200px; */
+    height:max-content;
+    padding-left: 160px;
+  }
+}
+

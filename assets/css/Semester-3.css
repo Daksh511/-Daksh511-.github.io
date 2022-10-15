@@ -1,0 +1,50 @@
+.sem3-body {
+    background-color: #E8DAEF
+}
+
+.sem3-heading {
+    padding-top: 10px;
+    display: flex;
+    font-family: fantasy;
+    justify-content: center;
+}
+.java {
+    width: 14vw;
+    height: 14vw;
+    background-image: url('../../assets/img/java-logo-1.png');
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.dcn {
+    width: 14vw;
+    height: 14vw;
+    background-image: url("../../assets/img/data-communication-icon-black-sign-vector-35192994-removebg-preview.png");
+    background-size: cover;
+    border-radius: 40%;
+}
+
+.de {
+    width: 14vw;
+    height: 14vw;
+    background-image: url("../../assets/img/newde-removebg.png");
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.maths-3 {
+    width: 14vw;
+    height: 14vw;
+    background-image: url("../../assets/img/maths3.jpg");
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.sem3-header 
+.background{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

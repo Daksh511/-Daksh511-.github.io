@@ -1,0 +1,44 @@
+.sem2-body{
+    background-color: #FDFEFE
+  }
+
+  .main header .sem2-content {
+    z-index: 10;
+}
+.sem2-heading {
+  padding-top: 10px;
+  display: flex;
+  font-family: fantasy;
+  justify-content: center;
+}
+.maths-2 {
+  background-size: cover;
+  border-radius: 50%;
+  width: 14vw;
+  height: 14vw;
+  background-image: url("../../assets/img/CCU.png");
+}
+
+.oopc {
+  width: 14vw;
+  height: 14vw;
+  background-image: url("../../assets/img/plus_logo_c_icon_214621.png");
+  background-size: cover;
+}
+
+.eoe {
+  width: 14vw;
+  height: 14vw;
+  background-image: url("../../assets/img/eoe-letter-logo-design-polygon-260nw-1762574633.jpg");
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.sem2-header 
+.background{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

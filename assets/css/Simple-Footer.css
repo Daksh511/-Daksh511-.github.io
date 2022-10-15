@@ -1,0 +1,48 @@
+.footer {
+  box-shadow: 0px 0px 12px var(--headfoot_shadow);
+  padding: 20px;
+  margin: 5px;
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
+  }
+}
+
+:root {
+  --background_color: rgb(251,247,255);
+  --headfoot_color: rgb(30,30,60);
+  --headfoot_hover_color: rgb(12,12,24);
+  --headfoot_text_color: rgb(255,255,0);
+  --headfoot_text_hover_color: rgb(255,255,255);
+  --headfoot_shadow: rgb(12,12,40);
+}
+
+.headfoot {
+  background-color: var(--headfoot_color);
+  color: var(--headfoot_text_color);
+  text-shadow: 3px 3px var(--headfoot_shadow);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.headfoot_icon:hover {
+  color: var(--headfoot_text_hover_color);
+}
+
+.headfoot_icon {
+  color: var(--headfoot_text_color);
+}
+

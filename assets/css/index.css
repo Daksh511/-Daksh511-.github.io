@@ -1,0 +1,74 @@
+.content {
+    height: 690px;
+}
+
+.image {
+    filter: blur(2px);
+    margin-top: 0px;
+    height: 690px;
+}
+
+.heading {
+    font-family: fantasy;
+    padding-top: 10px;
+    font-size: 3vw;
+    color: #232221;
+    align-items: center;
+    text-align: center;
+    transform: translate(0px, -700px);
+}
+
+.head {
+    color: #ffefd7;
+    font-size: 5vw;
+    padding-top: 50px;
+}
+
+h6 {
+    font-size: 2vw;
+    justify-content: center;
+    color: #ffefd7;
+    text-align: center;
+}
+
+.all-sem {
+    flex-direction: row;
+    transform: translate(0px, -550px);
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sem1 {
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url("../../assets/img/semester1.png");
+    width: 14vw;
+    height: 14vw;
+    border: 2px white solid;
+}
+
+.sem2 {
+    align-items: center;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url("../../assets/img/semester2.png");
+    width: 14vw;
+    height: 14vw;
+    border: 2px solid white;
+}
+
+.sem3 {
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url("../../assets/img/semester3.png");
+    width: 14vw;
+    height: 14vw;
+    border: 2px solid white;
+}
+
+footer {
+    width: 100%;
+    bottom: 0px;
+}
+

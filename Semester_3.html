@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no,height=device-height">
+    <title>Student E-Resource</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/Book Logo Design.png">
+    <link rel="stylesheet" href="assets/css/Animated-Type-Heading.css">
+    <link rel="stylesheet" href="assets/css/Header---Apple.css">
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="assets/css/Semester-3.css">
+    <link rel="stylesheet" href="assets/css/Common.css">
+</head>
+
+<body class="sem3-body">
+    <header class="sem3-header">
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo"></div><span>Student E-Resource</span>
+            </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Semester_1.html">Semester 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Semester_2.html">Semester 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about_us">Videos</a></li>
+                </ul><a class="btn btn-primary ms-md-2" role="button" href="#">Donations</a>
+            </div>
+        </div>
+    </nav>
+    <div class="sem3-content">
+        <h1 class="sem3-heading">SEMESTER 3</h1>
+        <hr class="mt-0">
+    </div>
+    <div class="all-subjects">
+        <div class="java" title="Java"></div>
+        <div class="de" title="Digital Electronics"></div>
+        <div class="dcn" title="DCN"></div>
+        <div class="maths-3" title="Discrete Maths"></div>
+    </div>
+    <canvas class="background"></canvas>
+    </header>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Animated-Type-Heading.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script>
+        window.onload = function () {
+            Particles.init({
+                selector: '.background',
+                color: '#6C3483',
+                maxParticles: 130,
+                connectParticles: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        options: {
+                            maxParticles: 80
+                        }
+                    }, {
+                        breakpoint: 375,
+                        options: {
+                            maxParticles: 50
+                        }
+                    }
+                ]
+            });
+        };
+    </script>
+</body>
+
+</html>
