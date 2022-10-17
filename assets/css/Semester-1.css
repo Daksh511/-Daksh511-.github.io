@@ -1,219 +1,241 @@
 .sem1-body {
-    background-color: #D6EAF8;
-    /* height: 100px; */
+  background-color: #D6EAF8;
+  /* height: 100px; */
 }
 
 .main header .sem1-content {
-    z-index: 1;
+  z-index: 1;
 }
 
 .sem1-heading {
-    padding-top: 10px;
-    display: flex;
-    font-family: fantasy;
-    justify-content: center;
+  padding-top: 10px;
+  display: flex;
+  font-family: fantasy;
+  justify-content: center;
 }
 
 .beee {
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-size: cover;
-    height: 14vw;
-    width: 14vw;
-    background-image: url("../../assets/img/BEE2.png");
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-size: cover;
+  height: 14vw;
+  width: 14vw;
+  background-image: url("../../assets/img/BEE2.png");
 }
 
 .ccp {
-    background-repeat: no-repeat;
-    width: 14vw;
-    height: 14vw;
-    background-image: url("../../assets/img/main-qimg-d2696a664169d5901d8dad5b65e0dba9.png");
-    background-size: cover;
+  background-repeat: no-repeat;
+  width: 14vw;
+  height: 14vw;
+  background-image: url("../../assets/img/main-qimg-d2696a664169d5901d8dad5b65e0dba9.png");
+  background-size: cover;
 }
 
 .maths {
-    width: 14vw;
-    height: 14vw;
-    background-image: url("../../assets/img/black-school-concept-with-maths-subject-vector-23060440.jpg");
-    background-size: cover;
-    border-radius: 50%;
+  width: 14vw;
+  height: 14vw;
+  background-image: url("../../assets/img/black-school-concept-with-maths-subject-vector-23060440.jpg");
+  background-size: cover;
+  border-radius: 50%;
 }
 
 .phy-lab {
-    border-radius: 50%;
-    width: 14vw;
-    height: 14vw;
-    background-image: url("../../assets/img/creative-physics-icon-background-png_264056.jpg");
-    background-size: cover;
+  border-radius: 50%;
+  width: 14vw;
+  height: 14vw;
+  background-image: url("../../assets/img/creative-physics-icon-background-png_264056.jpg");
+  background-size: cover;
 }
 
 .ict {
-    width: 14vw;
-    height: 14vw;
-    background-image: url("../../assets/img/129558577-ict-blue-word-concepts-banner-presentation-website-information-and-communication-technology-innovati.jpg");
-    background-size: contain;
-    border-radius: 50%;
+  width: 14vw;
+  height: 14vw;
+  background-image: url("../../assets/img/129558577-ict-blue-word-concepts-banner-presentation-website-information-and-communication-technology-innovati.jpg");
+  background-size: contain;
+  border-radius: 50%;
 }
 
 .beee-lab {
-    border-radius: 50%;
-    width: 14vw;
-    height: 14vw;
-    background-image: url("../../assets/img/istockphoto-584570730-612x612.jpg");
-    background-size: cover;
+  border-radius: 50%;
+  width: 14vw;
+  height: 14vw;
+  background-image: url("../../assets/img/istockphoto-584570730-612x612.jpg");
+  background-size: cover;
 }
 
 .sem1-header .background {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* height: 100%; */
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.overlay {
-    /* width: 100%;    
-    transition: opacity 500ms; */
-    /* visibility: hidden; */
-    /* opacity: 0; */
-    /* overflow: hidden; */
-    display: none;
-		position: absolute;
-		/* top: 0;
-		bottom: 0; */
-		background: #999;
-		width: 100%;
-		height: 100%;
-		opacity: 0.8;
-		z-index: 100;
-}
-
-/* .overlay:target {
-    /* visibility: visible; */
-    /* opacity: 1;
-    overflow: scroll;
-
-}  */
-
-.popup {
-    /* margin: 70px auto;
-    padding: 20px;
-    border-radius: 5px;
-    position: relative; */
-
-    display: none;
-		position: absolute;
-		/* top: 50%;
-		left: 50%; */
-		/* background: #fff; */
-		width: 100%;
-		/* height: 50; */
-		/* margin-left: -250px; Half the value of width to center div */
-		/* margin-top: -250px; Half the value of height to center div */
-		z-index: 200;
-}
-.popupclose {
-  float: right;
-  padding: 10px;
+#toTopBtn {
+  position: fixed;
+  bottom: 26px;
+  right: 39px;
+  z-index: 10000;
+  padding: 21px;
+  background-color: rgba(0, 0, 0, 0.443);
+  /* display: none; */
   cursor: pointer;
 }
-.popup .content {
-  max-height: 30%;
-  overflow:auto;
+
+.js .cd-top--fade-out {
+  opacity: .5;
 }
 
-.link {
-  /* visibility: visible; */
+.js .cd-top--is-visible {
+  visibility: visible;
   opacity: 1;
 }
 
-.box1{
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content:space-evenly;
+.js .cd-top {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s;
 }
 
-.box2{
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: space-evenly;
+.cd-top {
+  position: fixed;
+  bottom: 20px;
+  bottom: var(--cd-back-to-top-margin);
+  right: 20px;
+  right: var(--cd-back-to-top-margin);
+  display: inline-block;
+  height: 40px;
+  height: var(--cd-back-to-top-size);
+  width: 40px;
+  width: var(--cd-back-to-top-size);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+  background-color: hsla(5, 76%, 62%, .8);
+  background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8);
 }
 
-.sub-box1{
-    width: 400px;
-    height: 50px;
-    border: 1px solid black;
-    display: flex;
-    font-family: fantasy;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    background-color: #000000bb;
-    border-radius:10px;
-    color: white;
-}
-.sub-box2{
-    width: 400px;
-    height: 50px;
-    border: 1px solid black;
-    align-items: center;
-    display: flex;
-    font-family: fantasy;
-    justify-content: center;
-    font-size: 30px;
-    background-color: #000000bb;
-    border-radius:10px;
-    color: white;
+.beee-popup {
+  cursor: pointer;
 }
 
-.ppts{
-    width: 75%;
-    margin: 10px auto 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 100px;
-    /* margin-top: 150px; */
-  }
-  .ppts img {
-    width: 100%;
-    /* height: 100%; */
-    cursor: pointer;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.34);
+.popupcontrols {
+  float: right;
+  padding: 20px;
+  cursor: pointer;
+}
 
-  }
-  a{
-    text-decoration: none;
-  }
-  .assi{
-    width: 75%;
-    margin: 10px auto 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 100px;
-    /* margin-top: 150px; */
-  }
-  .assi img {
-    width: 100%;
-    /* height: 100%; */
-    cursor: pointer;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.34);
+.popup .content {
+  display: block;
+}
 
-  }
-  .ques{
-    width: 75%;
-    margin: 10px auto 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 100px;
-    /* margin-top: 150px; */
-  }
-  .ques img {
-    width: 100%;
-    /* height: 100%; */
-    cursor: pointer;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.34);
+.popup {
+  margin-top: 55px;
+  cursor: pointer;
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
 
-  }
+.popup:target {
+  display: block;
+  visibility: visible;
+}
+
+.box1 {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box2 {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sub-box1 {
+  width: 400px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  font-family: fantasy;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: #000000bb;
+  border-radius: 10px;
+  color: white;
+}
+
+.sub-box2 {
+  width: 400px;
+  height: 50px;
+  border: 1px solid black;
+  align-items: center;
+  display: flex;
+  font-family: fantasy;
+  justify-content: center;
+  font-size: 30px;
+  background-color: #000000bb;
+  border-radius: 10px;
+  color: white;
+}
+
+.ppts {
+  width: 75%;
+  margin: 10px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 100px;
+  /* margin-top: 150px; */
+}
+
+.ppts img {
+  width: 100%;
+  /* height: 100%; */
+  cursor: pointer;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.34);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.assi {
+  width: 75%;
+  margin: 10px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 100px;
+  /* margin-top: 150px; */
+}
+
+.assi img {
+  width: 100%;
+  /* height: 100%; */
+  cursor: pointer;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.34);
+
+}
+
+.ques {
+  width: 75%;
+  margin: 10px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 100px;
+  /* margin-top: 150px; */
+}
+
+.ques img {
+  width: 100%;
+  /* height: 100%; */
+  cursor: pointer;
+  box-shadow: 10px 10px rgba(0, 0, 0, 0.34);
+
+}
