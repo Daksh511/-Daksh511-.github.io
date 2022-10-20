@@ -22,9 +22,7 @@ body {
 .all-subjects {
   margin-top: 50px;
   justify-content: space-around;
-  display: flex;
-  flex-wrap: wrap;
-
+  display:flex;
 }
 
 @media (max-width: 400px) {
