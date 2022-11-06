@@ -1,68 +1,111 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyBJ_UI0Qc0Xe9GUDYJ2nJyr_Va7DocVDp8",
-    authDomain: "login-fdd7d.firebaseapp.com",
-    projectId: "login-fdd7d",
-    storageBucket: "login-fdd7d.appspot.com",
-    messagingSenderId: "281731942648",
-    appId: "1:281731942648:web:f28151e1cd7a28953cd30d",
-    measurementId: "G-WYMBY17DCZ"
-};
-firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-var datab  = firebase.database().ref('data');
+var loginpage = document.getElementById("login-page");
+var signuppage = document.getElementById("signup-page");
+var loginform = document.getElementById("login-form");
+var signupform = document.getElementById("signup-form");
+signupform.style.display = "none";
 
-// function UserRegister(){
-//     var email = document.getElementById('eemail').value;
-//     var password = document.getElementById('lpassword').value;
-//     firebase.auth().createUserWithEmailAndPassword(email,password).then(function(){
-
-//     }).catch(function (error){
-//         var errorcode = error.code;
-//         var errormsg = error.message;
-//     });
-//     var un = document.forms["form"]["eemail"].value;
-//     var pw = document.forms["form"]["lpassword"].value;
-//     if(un == "student" && pw == "charusat"){
-//         window.location.href="index.html";
-//     }
-//     else{
-//         alert("Invalid Username or Password");
-//     }
-
-// }
-const delay = (delayInms) => {
-    return new Promise(resolve => setTimeout(resolve, delayInms));
+function signupForm(){
+    loginform.style.display="none";
+    signupform.style.display = "block";
+}
+function loginForm(){
+    signupform.style.display = "none";
+    loginform.style.display="block";
+    
 }
 
-const auth = firebase.auth();
-async function SignIn(){
-    var email = document.getElementById('eemail').value;
-    var password = document.getElementById('lpassword').value;
-    const promise = auth.signInWithEmailAndPassword(email,password);
-    // promise.catch( e => alert(e.msg));
-    // window.open("https://www.google.com","_self");
-    var un = document.forms["form"]["eemail"].value;
-    var pw = document.forms["form"]["lpassword"].value;
-    if(un == "student" && pw == "charusat"){
-        let delayres = await delay(2000);
-        window.location.href="index.html";
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      document.getElementById("loginform").style.display="none";
+      change();
+      window.location.href="index.html";
+    } else {
+      // No user is signed in.
+      document.getElementById("loginform").style.display="block";
+
     }
-    else{
-        alert("Invalid Username or Password");
-    }
-}
-document.getElementById('form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    var userInfo = datab.push();
-    userInfo.set({
-        name: getId('fname'),
-        email : getId('eemail'),
-        password : getId('lpassword')
-    });
-    alert("Successfully Signed Up");
-    console.log("sent");
-    document.getElementById('form').reset();
+  });
+
+/*function login(){
+    var userEmail = document.getElementById("eimp").value;
+    var userPass = document.getElementById("pimp").value;
+
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
+
+}*/
+loginform.addEventListener('submit',(e) =>{
+  e.preventDefault();
+  var userEmail = document.getElementById("eimp").value;
+    var userPass = document.getElementById("pimp").value;
+
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
 });
-function getId(id){
-    return document.getElementById(id).value;
-}
+
+  function logout(){
+    firebase.auth().signOut();
+  }
+
+signupform.addEventListener('submit',(e) =>{
+  e.preventDefault();
+  var email= document.getElementById("email").value;
+  var pass =document.getElementById("password").value;
+  var name =document.getElementById("name").value;
+  var user = firebase.auth().currentUser;
+  
+  firebase.auth().createUserWithEmailAndPassword(email,pass).then(cred => {
+
+  });
+  firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    console.log("Error : " + errorMessage);
+
+    // ...
+  });
+  
+});
+
+function change(){
+  var user = firebase.auth().currentUser;
+  var name = document.getElementById("name").value;
+
+user.updateProfile({
+  displayName: name,
+  photoURL: "https://example.com/jane-q-user/profile.jpg"
+}).then(function() {
+  // Update successful.
+}).catch(function(error) {
+  // An error happened.
+});
+  }
+
+
+// The app only has access as defined in the Security Rules
+/*var db = firebase.database();
+var ref = db.ref("/text");
+ref.on("value", function(snapshot) {
+  console.log(snapshot.val());
+});
+*/
+var dbref = firebase.database().ref();
+var somevalue = "hello"
+dbref.child("text").set(somevalue);

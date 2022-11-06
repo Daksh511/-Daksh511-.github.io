@@ -28,7 +28,10 @@
                     <li class="nav-item"><a class="nav-link" href="#about_us">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Setup</a></li>
-                </ul><a class="btn btn-primary ms-md-2" role="button" href="#">Donations</a>
+                </ul><a class="btn btn-primary ms-md-2" role="button"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSe6wCW5XE5o7xzLtJQVat6Gy-poru2yCgPhVBo808fjLuIrAQ/viewform?embedded=true">Donations</a>
+
+                <li class="nav-item"><a onclick="logout()">Logout</a></li>
             </div>
         </div>
     </nav>
@@ -88,11 +91,23 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/Animated-Type-Heading.js"></script>
     <script src="assets/js/particles.min.js"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
-    <script src="login.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="server.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBJ_UI0Qc0Xe9GUDYJ2nJyr_Va7DocVDp8",
+            authDomain: "login-fdd7d.firebaseapp.com",
+            projectId: "login-fdd7d",
+            storageBucket: "login-fdd7d.appspot.com",
+            messagingSenderId: "281731942648",
+            appId: "1:281731942648:web:f28151e1cd7a28953cd30d",
+            measurementId: "G-WYMBY17DCZ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+    </script>
+    <script type="text/javascript" src="./assets/js/index.js"></script>
 </body>
 
 </html>
