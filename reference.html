@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <title>Student E-Resource</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/Book Logo Design.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Animated-Type-Heading.css">
+    <link rel="stylesheet" href="assets/css/Header---Apple.css">
+    <link rel="stylesheet" href="assets/css/Navbar-With-Button-icons.css">
+    <link rel="stylesheet" href="assets/css/Simple-Footer.css">
+    <link rel="stylesheet" href="assets/css/Common.css">
+    <link rel="stylesheet" href="assets/css/reference.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo"></div><span>Student E-Resource</span>
+            </a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about_us">About Us</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="reference.html">Reference Books</a></li> -->
+                    <li class="nav-item"><a class="nav-link" onclick="logout()">Logout</a></li>
+                </ul>
+                <a class="btn btn-primary ms-md-2" role="button"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSccII4JREVw4gCYxmuBE8HclJSexybXrNO7phNkUBDhy9p_NA/viewform?embedded=true">Donate
+                    Your Book</a>
+
+            </div>
+        </div>
+    </nav>
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+        data-abc="true"></a>
+
+    <div class="content">
+        <h1 class="heading" style="margin-top:50px ;">SEMESTER 1</h1>
+        <hr class="mt-0">
+        <div class="books">
+            <a href="https://drive.google.com/file/d/1Nx2S44J4vp5e0kZ3RBadt1Nbfg6O12xO/view?usp=share_link"
+                target="_blank"><img src="./assets/img/ansic.jpg"></a>
+            <a href="https://drive.google.com/file/d/12SwL1zuuu6obhBzeGIwlMIJXSPl5UDrF/view?usp=share_link"
+                target="_blank"><img src="./assets/img/math1.jpg"></a>
+            <a href="https://drive.google.com/file/d/1vSRosCsyg08hMG3G8IDIwx_A441puTu2/view?usp=share_link"
+                target="_blank"><img src="./assets/img/beee.jpg"></a>
+
+        </div>
+        <h1 class="heading" style="margin-top:50px ;">SEMESTER 2</h1>
+        <hr class="mt-0">
+        <div class="books">
+            <a href="https://drive.google.com/file/d/13cQX2pa9ZjM0hndNh3OVrDSRywH4CheS/view?usp=share_link"
+                target="_blank"><img src="./assets/img/c++.jpg"></a>
+            <a href="https://drive.google.com/file/d/1Aia66xV9IfLSseTXZV1FzU6EBZ2qD_He/view?usp=share_link"
+                target="_blank"><img src="./assets/img/math2.jpg"></a>
+            <a href="https://drive.google.com/file/d/1oa7WekRS6ce-QMZXPiHp1ehmp5sTX9vl/view?usp=share_link"
+                target="_blank"><img src="./assets/img/eoe.jpg"></a>
+
+        </div>
+        <h1 class="heading" style="margin-top:50px ;">SEMESTER 3</h1>
+        <hr class="mt-0">
+        <div class="books">
+            <a href="https://drive.google.com/file/d/1BV2UcBySVrcyN9v7mcu3hENiLNaJ2y6-/view?usp=share_link"
+                target="_blank"><img src="./assets/img/javabook.jpg"></a>
+            <a href="https://drive.google.com/file/d/1Ixehd8zISDYze9F0g15olWKVTvtP9B_l/view?usp=share_link"
+                target="_blank"><img src="./assets/img/de.jpg"></a>
+            <a href="https://drive.google.com/file/d/1n5cIIbHQHsdD16iRMTYdPWAKswgOg9WC/view?usp=share_link"
+                target="_blank"><img src="./assets/img/dcn.jpg"></a>
+            <a href="https://drive.google.com/file/d/1mX5tTr9ohs6-oBIzKZBWUcBqIhnuOEqT/view?usp=share_link"
+                target="_blank"><img src="./assets/img/math3.jpg"></a>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 20) {
+                $('#toTopBtn').fadeIn();
+            } else {
+                $('#toTopBtn').fadeOut();
+            }
+        });
+
+        $('#toTopBtn').click(function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 1000);
+            return false;
+        });
+    });
+</script>
+<script>
+    var myLink = document.querySelectorAll('a[href="#"]');
+    myLink.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+        });
+    });
+
+</script>
+
+</html>
