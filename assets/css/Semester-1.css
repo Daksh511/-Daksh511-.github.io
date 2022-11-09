@@ -240,3 +240,10 @@ a {
 
 }
 
+iframe{
+  width: 30%;
+  margin: 10px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  grid-gap: 100px;
+}
