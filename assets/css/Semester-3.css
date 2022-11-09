@@ -1,7 +1,48 @@
 .sem3-body {
     background-color: #E8DAEF
 }
+#toTopBtn {
+  position: fixed;
+  bottom: 26px;
+  right: 39px;
+  z-index: 10000;
+  padding: 21px;
+  background-color: rgba(0, 0, 0, 0.443);
+  /* display: none; */
+  cursor: pointer;
+}
 
+.js .cd-top--fade-out {
+  opacity: .5;
+}
+
+.js .cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.js .cd-top {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.cd-top {
+  position: fixed;
+  bottom: 20px;
+  bottom: var(--cd-back-to-top-margin);
+  right: 20px;
+  right: var(--cd-back-to-top-margin);
+  display: inline-block;
+  height: 40px;
+  height: var(--cd-back-to-top-size);
+  width: 40px;
+  width: var(--cd-back-to-top-size);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+  background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+  background-color: hsla(5, 76%, 62%, .8);
+  background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8);
+}
 .sem3-heading {
     padding-top: 10px;
     display: flex;
@@ -104,6 +145,22 @@
   }
   
   .file img {
+    width: 100%;
+    /* height: 100%; */
+    cursor: pointer;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.34);
+  
+  }
+  .pr-paper {
+    width: 75%;
+    margin: 10px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 100px;
+    /* margin-top: 150px; */
+  }
+  
+  .pr-paper img {
     width: 100%;
     /* height: 100%; */
     cursor: pointer;
